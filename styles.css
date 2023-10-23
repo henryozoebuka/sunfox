@@ -20,6 +20,14 @@ header {
     padding: 40px 100px 30px 100px;
 }
 
+header button {
+    display: none;
+    color: orangered;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
 .link-one {
     color: #ffffff;
     background-color: orangered;
@@ -76,6 +84,7 @@ nav li {
 .div-one h1 {
     font-size: 3rem;
     line-height: 1rem;
+    min-width: 400px;
 }
 
 .div-one {
@@ -109,4 +118,39 @@ input:hover {
 
 footer {
     text-align: center;
+}
+
+
+@media (max-width: 900px) {
+    header {
+        display: flex;
+        padding: 5%;
+    }
+
+    header button {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .one {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .one > div {
+        width: 90%
+    }   
+}
+
+@media (max-width: 450px) {
+    .div-one h1 {
+        font-size: 3rem;
+        line-height: 2rem;
+        min-width: auto;
+    }
 }
